@@ -7,7 +7,7 @@ body {
   color: #fff; /* Set default font color to white */
 }
 /* Update the placeholder text styles to use Helvetica Bold and make it larger */
-.placeholder-text p {
+.title-text p {
   color: #fff; /* Set the font color of the placeholder text to white */
   font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
   font-size: 28px; /* Increase font size */
@@ -51,7 +51,7 @@ body {
   transition: transform 0.5s ease;
 }
 
-.placeholder-text {
+.title-text {
   width: 50%;
   padding: 20px;
 }
@@ -86,7 +86,142 @@ body {
   width: 100%;
   height: 10vh;
 }
+.logo-link {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-link:hover #logoImage {
+  opacity: 0;
+}
+
+.logo-link:hover #logoHover {
+  opacity: 1;
+}
 
 .logo {
-  max-width: 500px;
+  max-width: 200px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-width: 200px;
+  transition: opacity 0.3s ease;
+}
+.leftLogo{
+	width: 5%;
+	top: 22.5%;
+	left: 35%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInLeft;
+}
+.largeLogo{
+	width: 10%;
+	top: -3%;
+	left: 42%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.75s;
+    animation-name: slideIn;
+}
+.rightLogo{
+	width: 5%;
+	top: 22.5%;
+	left: 53%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInRight;
+	
+}
+@keyframes slideIn {
+    0% {
+		transform: translateX(30%) scale(0.5);
+        
+    }
+	20%{
+		transform: translateY(0);
+	}
+	30%{
+		transform: translateX(20%) translateY(200%) scale(1);
+	}
+    70% {
+        
+		transform: translateX(20%) translateY(200%) scale(1);
+    }
+	100%{
+		transform: translateY(-300%);
+	}
+}
+@keyframes slideInLeft {
+    0% {
+		transform: translateX(100%) translateY(-200%) scale(0.5);
+        
+    }
+	20%{
+		transform: translateY(0);
+		
+	}
+    30% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+	70% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+	100%{
+		transform: translateX(-1000%);
+	}
+}
+@keyframes slideInRight {
+    0% {
+		transform: translateX(30%) translateY(-200%) scale(0.5);
+        
+    }
+	20%{
+		transform: translateY(0);
+		
+	}
+    30% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+	70% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+	100%{
+		transform: translateX(1000%);
+	}
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Apply fade-in animation to logo, image, text, and button */
+  .logo,
+  .gallery-image,
+  .placeholder-text,
+  .buy-btn 
+  .prev-btn,
+	.next-btn,
+	.title-text{
+    animation: fadeIn 1s ease 1.5s forwards;
+  }
+  .logo,
+.gallery-image,
+.placeholder-text,
+.buy-btn,
+.prev-btn,
+.next-btn,
+.title-text{
+  opacity: 0; /* Start with opacity 0 */
 }
