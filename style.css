@@ -26,7 +26,7 @@ body{
 }
 .largeLogo{
 	width: 10%;
-	top: -3%;
+	top: 1%;
 	left: 42%;
 	position: fixed;
 	animation-fill-mode: forwards;
