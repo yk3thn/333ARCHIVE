@@ -1,0 +1,200 @@
+body{
+	margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.leftLogo{
+	width: 5%;
+	top: 22.5%;
+	left: 35%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInLeft;
+}
+.largeLogo{
+	width: 10%;
+	top: -3%;
+	left: 42%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.75s;
+    animation-name: slideIn;
+}
+.rightLogo{
+	width: 5%;
+	top: 22.5%;
+	left: 53%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInRight;
+	
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-300%);
+    }
+	50%{
+		transform: translateX(20%) translateY(200%) scale(1);
+	}
+	70%{
+		transform: translateX(20%) translateY(200%) scale(1);
+	}
+    80% {
+        transform: translateY(0);
+    }
+	100%{
+		transform: translateX(30%) scale(0.5);
+	}
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-1000%);
+    }
+	50%{
+		transform: translateX(40%) translateY(200%) scale(1);
+	}
+    70% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+	80% {
+        transform: translateY(0);
+    }
+	100%{
+		transform: translateX(100%) translateY(-200%) scale(0.5);
+	}
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(1000%);
+    }
+	50%{
+		transform: translateX(50%) translateY(200%) scale(1);
+	}
+    70% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+	80% {
+        transform: translateY(0);
+    }
+	100%{
+		transform: translateX(30%) translateY(-200%) scale(0.5);
+	}
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+.background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place behind other content */
+        background-image: url('assets/background.png'); /* Replace with your image */
+        background-size: cover;
+        animation: scrollBackground 30s linear infinite; /* Adjust speed as needed */
+    }
+
+    @keyframes scrollBackground {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 -100%; /* Adjust vertical offset for scrolling */
+        }
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        animation: fadeIn 0.5s ease 1.5s forwards;
+        opacity: 0;
+        position: absolute;
+        top: 20%; /* 20% from the top */
+        width: 100%;
+        height: 80%; /* 60% height of the viewport */
+        overflow-y: scroll; /* Enable vertical scrolling */
+        box-sizing: border-box; /* Include padding in height calculation */
+		transform: translateX(2.65%);
+    }
+
+    .grid-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px; /* Rounded corners */
+        transition: transform 0.3s ease;
+        width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
+        height: calc(25vw - 10px); /* Adjusted height based on viewport width and grid gap */
+        max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
+        max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Fit the entire image within the grid item */
+        display: block;
+    }
+
+    .grid-item:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hover-overlay h2 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .grid-item:hover .hover-overlay {
+        opacity: 1;
+    }
