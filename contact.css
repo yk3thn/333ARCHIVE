@@ -312,7 +312,7 @@ body {
 .information p {
   color: #fff; /* Set the font color of the placeholder text to white */
   font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 40px; /* Increase font size */
+  font-size: 30px; /* Increase font size */
   font-weight: bold; /* Set font weight to bold */
 }
 .information {
