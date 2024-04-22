@@ -41,7 +41,7 @@ body{
 	animation-fill-mode: forwards;
 	animation-duration: 1.5s;
 	animation-name: slideInRight;
-	
+	margin-bottom: 75%;
 }
 @keyframes slideIn {
     0% {
@@ -243,7 +243,7 @@ body{
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #FF0000;
     color: #fff;
     text-decoration: none;
     font-size: 25px;
@@ -278,7 +278,7 @@ body{
 }
 @keyframes moveBanner {
   0% {
-    transform: translateX(-50%); /* Start from the left */
+    transform: translateX(-25%); /* Start from the left */
   }
   100% {
     transform: translateX(200%); /* Move to the right */
