@@ -118,22 +118,24 @@ body{
         }
     }
 .logo,
-  .gallery-image,
-  .placeholder-text,
-  .buy-btn,
-  .prev-btn,
-	.next-btn,
-	.title-text{
-		
-    animation: fadeIn 0.5s ease 1.5s forwards;
-  }
-  .logo,
 .gallery-image,
 .placeholder-text,
 .buy-btn,
 .prev-btn,
 .next-btn,
 .title-text{
+		
+    animation: fadeIn 0.5s ease 1.5s forwards;
+ }
+  
+.logo,
+.gallery-image,
+.placeholder-text,
+.buy-btn,
+.prev-btn,
+.next-btn,
+.title-text,
+.logo-hover{
   opacity: 0; /* Start with opacity 0 */
 }
 

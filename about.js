@@ -1,17 +1,46 @@
-window.onresize = function() {
-            var textElement = document.getElementById('responsiveText');
-			var textElement1 = document.getElementById('responsiveText1');
-            var windowWidth = window.innerWidth;
 
-            // Adjust font size based on window width
-            if (windowWidth < 600) {
-                textElement.style.fontSize = '15px'; // Small font size for smaller screens
-				textElement1.style.fontSize = '20px';
-            } else {
-                textElement.style.fontSize = '20px'; // Default font size
-				textElement1.style.fontSize = '30px';
-            }
-        };
+		
+function adjustStylesForScreenSize() {
+    var screenWidth = window.innerWidth;
 
-        // Call the resize function on page load to set initial font size
-        window.onload = window.onresize;
+    if (screenWidth <= 700) { // Adjust styles for smaller screens
+        document.getElementById('logoWordmark').style.width = '125px';
+		document.getElementById('logoHover').style.width = '125px';
+		document.getElementById('banner').style.fontSize = '10px';
+		document.getElementById('responsiveText').style.fontSize = 	'30px';
+		document.getElementById('responsiveText1').style.fontSize = '15px';
+		document.getElementById('responsiveText2').style.fontSize = '15px';
+		document.getElementById('responsiveText3').style.fontSize = '20px';
+		document.getElementById('responsiveText4').style.fontSize = '15px';
+		document.getElementById('responsiveText5').style.fontSize = '10px';
+		document.getElementById('responsiveText6').style.fontSize = '15px';
+		document.getElementById('responsiveText7').style.fontSize = '10px';
+		document.getElementById('responsiveText8').style.fontSize = '15px';
+		document.getElementById('responsiveText9').style.fontSize = '10px';
+		document.getElementById('responsiveTexta').style.fontSize = '15px';
+		document.getElementById('responsiveTextb').style.fontSize = '10px';
+    } else { // Reset styles for larger screens
+        document.getElementById('logoWordmark').style.width = '200px';
+		document.getElementById('logoHover').style.width = '200px';
+		document.getElementById('banner').style.fontSize = '15px';
+		document.getElementById('responsiveText').style.fontSize = 	'40px';
+		document.getElementById('responsiveText1').style.fontSize = '20px';
+		document.getElementById('responsiveText2').style.fontSize = '20px';
+		document.getElementById('responsiveText3').style.fontSize = '30px';
+		document.getElementById('responsiveText4').style.fontSize = '20px';
+		document.getElementById('responsiveText5').style.fontSize = '15px';
+		document.getElementById('responsiveText6').style.fontSize = '20px';
+		document.getElementById('responsiveText7').style.fontSize = '15px';
+		document.getElementById('responsiveText8').style.fontSize = '20px';
+		document.getElementById('responsiveText9').style.fontSize = '15px';
+		document.getElementById('responsiveTexta').style.fontSize = '20px';
+		document.getElementById('responsiveTextb').style.fontSize = '15px';
+		document.getElementById('responsiveTextc').style.fontSize = '20px';
+		document.getElementById('responsiveTextd').style.fontSize = '15px';
+		
+    }
+}
+
+// Call the function initially and on window resize
+adjustStylesForScreenSize();
+window.addEventListener('resize', adjustStylesForScreenSize);
