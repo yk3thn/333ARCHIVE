@@ -37,8 +37,6 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveTextb').style.fontSize = '15px';
 		document.getElementById('responsiveTextc').style.fontSize = '20px';
 		document.getElementById('responsiveTextd').style.fontSize = '15px';
-		document.getElementById('responsiveTexte').style.fontSize = '20px';
-		document.getElementById('responsiveTextf').style.fontSize = '15px';
 		
     }
 }

@@ -17,21 +17,21 @@ function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
     if (screenWidth <= 700) { // Adjust styles for smaller screens
-        document.getElementById('navbtn').style.fontSize = '18px';
-		document.getElementById('navbtn2').style.fontSize = '18px';
-		document.getElementById('LLogo').style.top = '15%';
-		document.getElementById('RLogo').style.top = '15%';
+        document.getElementById('navbtn').style.fontSize = '15px';
+		document.getElementById('navbtn2').style.fontSize = '15px';
+		document.getElementById('LLogo').style.top = '12.5%';
+		document.getElementById('RLogo').style.top = '12.5%';
 		document.getElementById('MLogo').style.top = '5%';
         document.getElementById('searchInput').style.fontSize = '12px';
-        document.getElementById('searchInput').style.width = '150px';
+        document.getElementById('searchInput').style.width = '100px';
         document.getElementById('searchContainer').style.padding = '5px';
         document.getElementById('navbtn').style.padding = '5px 10px';
 		document.getElementById('navbtn2').style.padding = '5px 10px';
         document.querySelector('.grid-container').style.marginTop = '40px';
 		document.getElementById('banner').style.fontSize = '10px';
     } else { // Reset styles for larger screens
-        document.getElementById('navbtn').style.fontSize = '24px';
-		document.getElementById('navbtn2').style.fontSize = '24px';
+        document.getElementById('navbtn').style.fontSize = '25px';
+		document.getElementById('navbtn2').style.fontSize = '25px';
 		document.getElementById('LLogo').style.top = '27%';
 		document.getElementById('RLogo').style.top = '27%';
 		document.getElementById('MLogo').style.top = '1%';

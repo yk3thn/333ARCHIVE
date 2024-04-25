@@ -14,6 +14,14 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveText4').style.fontSize = '15px';
 		document.getElementById('responsiveText5').style.fontSize = '25px';
 		document.getElementById('responsiveText6').style.fontSize = '15px';
+		document.getElementById('responsiveText7').style.fontSize = '25px';
+		document.getElementById('responsiveText8').style.fontSize = '15px';
+		document.getElementById('responsiveText9').style.fontSize = '25px';
+		document.getElementById('responsiveTexta').style.fontSize = '15px';
+		document.getElementById('responsiveTextb').style.fontSize = '25px';
+		document.getElementById('responsiveTextc').style.fontSize = '15px';
+		document.getElementById('responsiveTextd').style.fontSize = '25px';
+		document.getElementById('responsiveTexte').style.fontSize = '15px';
     } else { // Reset styles for larger screens
         document.getElementById('logoWordmark').style.width = '200px';
 		document.getElementById('logoHover').style.width = '200px';
@@ -25,6 +33,14 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveText4').style.fontSize = '20px';
 		document.getElementById('responsiveText5').style.fontSize = '30px';
 		document.getElementById('responsiveText6').style.fontSize = '20px';
+		document.getElementById('responsiveText7').style.fontSize = '30px';
+		document.getElementById('responsiveText8').style.fontSize = '20px';
+		document.getElementById('responsiveText9').style.fontSize = '30px';
+		document.getElementById('responsiveTexta').style.fontSize = '20px';
+		document.getElementById('responsiveTextb').style.fontSize = '30px';
+		document.getElementById('responsiveTextc').style.fontSize = '20px';
+		document.getElementById('responsiveTextd').style.fontSize = '30px';
+		document.getElementById('responsiveTexte').style.fontSize = '20px';
     }
 }
 

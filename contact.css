@@ -319,7 +319,7 @@ body {
 }
 .information {
   position: fixed;
-  top: 50%;
+  top: 52.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -331,7 +331,11 @@ body {
 }
 .a{
 	color: #909090;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+}
+h3{
+	color: #fff;
+	margin-bottom: 5px;
 }
 .logo-container {
   display: flex;
