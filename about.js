@@ -3,14 +3,14 @@
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 700) { // Adjust styles for smaller screens
+    if (screenWidth <= 1300) { // Adjust styles for smaller screens
         document.getElementById('logoWordmark').style.width = '125px';
 		document.getElementById('logoHover').style.width = '125px';
 		document.getElementById('banner').style.fontSize = '10px';
-		document.getElementById('responsiveText').style.fontSize = 	'30px';
-		document.getElementById('responsiveText1').style.fontSize = '15px';
-		document.getElementById('responsiveText2').style.fontSize = '15px';
-		document.getElementById('responsiveText3').style.fontSize = '20px';
+		document.getElementById('responsiveText').style.fontSize = 	'25px';
+		document.getElementById('responsiveText1').style.fontSize = '20px';
+		document.getElementById('responsiveText2').style.fontSize = '10px';
+		document.getElementById('responsiveText3').style.fontSize = '15px';
 		document.getElementById('responsiveText4').style.fontSize = '15px';
 		document.getElementById('responsiveText5').style.fontSize = '10px';
 		document.getElementById('responsiveText6').style.fontSize = '15px';
@@ -19,6 +19,10 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveText9').style.fontSize = '10px';
 		document.getElementById('responsiveTexta').style.fontSize = '15px';
 		document.getElementById('responsiveTextb').style.fontSize = '10px';
+		document.getElementById('responsiveTextc').style.fontSize = '15px';
+		document.getElementById('responsiveTextd').style.fontSize = '10px';
+		document.getElementById('responsiveTexte').style.fontSize = '15px';
+		document.getElementById('responsiveTextf').style.fontSize = '10px';
     } else { // Reset styles for larger screens
         document.getElementById('logoWordmark').style.width = '200px';
 		document.getElementById('logoHover').style.width = '200px';
