@@ -3,7 +3,7 @@
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 700) { // Adjust styles for smaller screens
+    if (screenWidth <= 1300) { // Adjust styles for smaller screens
         document.getElementById('logoWordmark').style.width = '125px';
 		document.getElementById('logoHover').style.width = '125px';
 		document.getElementById('banner').style.fontSize = '10px';
