@@ -1,4 +1,4 @@
-const images = ["../assets/bb_ps5.png", "../assets/bb_ps5.png", "../assets/bb_ps53.png", "../assets/bb_ps54.png", "../assets/bb_ps55.png", "../assets/bb_ps56.png", "../assets/bb_ps57.png", "../assets/bb_ps58.png"];
+const images = ["../assets/bb_ps5.png", "../assets/bb_ps52.png", "../assets/bb_ps53.png", "../assets/bb_ps54.png", "../assets/bb_ps55.png", "../assets/bb_ps56.png", "../assets/bb_ps57.png", "../assets/bb_ps58.png"];
 let currentIndex = 0;
 
 function prevImage() {

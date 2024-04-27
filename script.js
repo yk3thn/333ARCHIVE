@@ -16,7 +16,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { // Adjust styles for smaller screens
+    if (window.innerWidth < 768) { // Adjust styles for smaller screens
         document.getElementById('navbtn').style.fontSize = '15px';
 		document.getElementById('navbtn2').style.fontSize = '15px';
 		document.getElementById('LLogo').style.top = '12.5%';
