@@ -15,8 +15,9 @@ document.getElementById('searchInput').addEventListener('input', function() {
         });
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
+const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
-    if (window.innerWidth < 768) { // Adjust styles for smaller screens
+	if (isMobile) { // Adjust styles for smaller screens
         document.getElementById('navbtn').style.fontSize = '15px';
 		document.getElementById('navbtn2').style.fontSize = '15px';
 		document.getElementById('LLogo').style.top = '12.5%';
