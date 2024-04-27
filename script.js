@@ -16,7 +16,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1300) { // Adjust styles for smaller screens
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { // Adjust styles for smaller screens
         document.getElementById('navbtn').style.fontSize = '15px';
 		document.getElementById('navbtn2').style.fontSize = '15px';
 		document.getElementById('LLogo').style.top = '12.5%';
@@ -29,7 +29,7 @@ function adjustStylesForScreenSize() {
 		document.getElementById('navbtn2').style.padding = '5px 10px';
         document.querySelector('.grid-container').style.marginTop = '40px';
 		document.getElementById('banner').style.fontSize = '10px';
-    } else { // Reset styles for larger screens
+    } else {
         document.getElementById('navbtn').style.fontSize = '25px';
 		document.getElementById('navbtn2').style.fontSize = '25px';
 		document.getElementById('LLogo').style.top = '27%';
