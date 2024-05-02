@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>333ARCHIVE</title>
+  <link rel="stylesheet" href="archive_t.css">
+	<link rel="icon" href="../assets/favicon.ico">
+</head>
+
+<body style="background-image: url('../assets/background.png');">
+		<img src="../assets/3.png" class="leftLogo">
+		<img src="../assets/3.png" class="largeLogo">
+		<img src="../assets/3.png" class="rightLogo">
+	<div class="logo-container">
+		<a href="../index.html" class="logo-link">
+			<img src="../assets/333_wordmark_white.png" class="logo">
+			<img src="../assets/333_wordmark_black.png" class="logo-hover" id="logoHover">
+		</a>
+	</div>
+	<div class="container">
+    <div class="image-gallery">
+      <img src="../assets/items/archive_tshirt/1.png" class="gallery-image" id="mainImage">
+      <button class="prev-btn" onclick="prevImage()">&lt;</button>
+      <button class="next-btn" onclick="nextImage()">&gt;</button>
+    </div>
+    <div class="title-text">
+      <p>333ARCHIVE Official T-Shirt</p>
+	  <h2 id="price">$25</h2>
+	  <label for="sizePicker">Size:</label>
+    <select id="sizePicker" onchange="handleSizeChange()">
+		<option value="xsmall">X-Small</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="xl">X-Large</option>
+		<option value="2xl">2XL</option>
+		<option value="3xl">3XL</option>
+		<option value="4xl">4XL</option>
+		<option value="5xl">5XL</option>
+    </select>
+
+    <p id="selectedSize"><span></span></p>
+      <button class="buy-btn">BUY NOW</button>
+    </div>
+  </div>
+
+  <script src="archive_tshirt.js"></script>
+</body>
+
+</html>

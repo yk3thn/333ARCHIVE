@@ -49,3 +49,41 @@ const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
 // Call the function initially and on window resize
 adjustStylesForScreenSize();
 window.addEventListener('resize', adjustStylesForScreenSize);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const imageGallery = document.getElementById('imageGallery');
+  const gridItems = imageGallery.querySelectorAll('.grid-item');
+
+  // Function to sort items by price from lowest to highest
+  function sortByPriceLowToHigh() {
+    const sortedItems = Array.from(gridItems).sort((a, b) => {
+      return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+    });
+    imageGallery.innerHTML = '';
+    sortedItems.forEach(item => imageGallery.appendChild(item));
+	getElementByClassName('grid-item').style.height = '100%';
+  }
+
+  // Function to sort items by price from highest to lowest
+  function sortByPriceHighToLow() {
+    const sortedItems = Array.from(gridItems).sort((a, b) => {
+      return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+    });
+    imageGallery.innerHTML = '';
+    sortedItems.forEach(item => imageGallery.appendChild(item));
+  }
+
+  // Function to sort items by date added from earliest to latest
+  function sortByDateEarliestToLatest() {
+    const sortedItems = Array.from(gridItems).sort((a, b) => {
+      return new Date(a.dataset.date) - new Date(b.dataset.date);
+    });
+    imageGallery.innerHTML = '';
+    sortedItems.forEach(item => imageGallery.appendChild(item));
+  }
+
+  // Event listeners for the sorting buttons
+  document.getElementById('sortLowToHigh').addEventListener('click', sortByPriceLowToHigh);
+  document.getElementById('sortHighToLow').addEventListener('click', sortByPriceHighToLow);
+  document.getElementById('sortByDate').addEventListener('click', sortByDateEarliestToLatest);
+});
