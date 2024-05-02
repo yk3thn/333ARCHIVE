@@ -183,7 +183,7 @@ body{
         border-radius: 10px; /* Rounded corners */
         transition: transform 0.3s ease;
         width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
-        height: calc(25vw - 10px); /* Adjusted height based on viewport width and grid gap */
+        height: auto; /* Adjusted height based on viewport width and grid gap */
         max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
         max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
     }
@@ -237,7 +237,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveBanner 20s linear infinite; /* Adjust animation duration as needed */
+  animation: moveBanner 30s linear infinite; /* Adjust animation duration as needed */
   animation-delay: 0s; /* Delay the animation for 10 seconds */
 }
 .navbar {
@@ -303,26 +303,4 @@ body{
   100% {
     transform: translateX(200%); /* Move to the right */
   }
-}
-@media (max-width: 600px) {
-    .navbar {
-        padding: 5px 10px; /* 50% smaller padding */
-    }
-
-    .navbar h1 {
-        font-size: 18px; /* 50% smaller font size */
-    }
-
-    #searchContainer {
-        padding: 5px; /* 50% smaller padding */
-    }
-
-    #searchInput {
-        font-size: 12px; /* 50% smaller font size */
-        width: 150px; /* 25% smaller width */
-    }
-
-    .grid-container {
-        margin-top: 40px; /* Adjusted margin top */
-    }
 }

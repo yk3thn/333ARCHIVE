@@ -1,4 +1,4 @@
-const images = ["../assets/items/placeholder/1.png", "../assets/items/placeholder/2.png", "../assets/items/placeholder/3.png", "../assets/items/placeholder/4.png", "../assets/items/placeholder/5.png"];
+const images = ["../assets/items/balenciaga_ps5_hoodie/1.png", "../assets/items/balenciaga_ps5_hoodie/2.png"];
 let currentIndex = 0;
 //document.getElementById("mainImage").src = images[currentIndex];
 

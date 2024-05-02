@@ -369,9 +369,9 @@ body {
   max-width: 200px;
   transition: opacity 0.3s ease;
 }
-#responsiveText {
-    font-size: 16px; /* Default font size */
+#responsiveText5 {
+    margin-bottom: 5px;
 }
 #responsiveText1 {
-	font-size: 30px; /* Default font size */
+	font-size: 25px; /* Default font size */
 }
