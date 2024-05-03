@@ -31,16 +31,16 @@ const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
         document.querySelector('.grid-container').style.marginTop = '40px';
 		document.getElementById('banner').style.fontSize = '10px';
     } else {
-        document.getElementById('navbtn').style.fontSize = '25px';
-		document.getElementById('navbtn2').style.fontSize = '25px';
+        document.getElementById('navbtn').style.fontSize = '20px';
+		document.getElementById('navbtn2').style.fontSize = '20px';
 		document.getElementById('LLogo').style.top = '27%';
 		document.getElementById('RLogo').style.top = '27%';
 		document.getElementById('MLogo').style.top = '1%';
         document.getElementById('searchInput').style.fontSize = '16px';
         document.getElementById('searchInput').style.width = '200px';
         document.getElementById('searchContainer').style.padding = '10px';
-        document.getElementById('navbtn').style.padding = '10px 20px';
-		document.getElementById('navbtn2').style.padding = '10px 20px';
+        document.getElementById('navbtn').style.padding = '7px 15px';
+		document.getElementById('navbtn2').style.padding = '7px 15px';
         document.querySelector('.grid-container').style.marginTop = '50px';
 		document.getElementById('banner').style.fontSize = '15px';
     }
