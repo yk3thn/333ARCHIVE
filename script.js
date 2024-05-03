@@ -18,8 +18,8 @@ function adjustStylesForScreenSize() {
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
 	if (isMobile) { // Adjust styles for smaller screens
-        document.getElementById('navbtn').style.fontSize = '15px';
-		document.getElementById('navbtn2').style.fontSize = '15px';
+        document.getElementById('navbtn').style.fontSize = '10px';
+		document.getElementById('navbtn2').style.fontSize = '10px';
 		document.getElementById('LLogo').style.top = '12.5%';
 		document.getElementById('RLogo').style.top = '12.5%';
 		document.getElementById('MLogo').style.top = '5%';
