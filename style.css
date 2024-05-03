@@ -170,7 +170,7 @@ body{
         animation: fadeIn 0.5s ease 1.5s forwards;
         opacity: 0;
         position: absolute;
-        top: 20%; /* 20% from the top */
+        top: 15%; /* 20% from the top */
         width: 100%;
         height: 80%; /* 60% height of the viewport */
         overflow-y: scroll; /* Enable vertical scrolling */
