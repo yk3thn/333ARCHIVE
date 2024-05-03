@@ -171,7 +171,6 @@ body{
         opacity: 0;
         position: absolute;
         top: 20%; /* 20% from the top */
-		right: 1.75%;
         width: 100%;
         height: 80%; /* 60% height of the viewport */
         overflow-y: scroll; /* Enable vertical scrolling */
@@ -190,11 +189,9 @@ body{
         border-radius: 10px; /* Rounded corners */
         transition: transform 0.3s ease;
         width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
-        height: 100%; /* Adjusted height based on viewport width and grid gap */
+        height: auto; /* Adjusted height based on viewport width and grid gap */
         max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
         max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
-		flex: 0 0 calc(33.33% - 20px);
-		margin-bottom: 20px;
     }
 
     .grid-item img {
@@ -336,15 +333,4 @@ body{
 
 .smallButton:hover {
   background-color: #d00; /* Darker red on hover */
-}
-
-#imageGallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.grid-item {
-  //width: calc(33.33% - 20px); /* Adjust width and gap */
-  margin-bottom: 20px; /* Adjust margin */
 }
