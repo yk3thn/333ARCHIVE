@@ -184,29 +184,7 @@ body {
         position: absolute;
 	}
 
-    .grid-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px; /* Rounded corners */
-        transition: transform 0.3s ease;
-        width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
-        height: calc(25vw - 10px); /* Adjusted height based on viewport width and grid gap */
-        max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
-        max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
-    }
-
-    .grid-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Fit the entire image within the grid item */
-        display: block;
-    }
-
-    .grid-item:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
+    
     .hover-overlay {
         position: absolute;
         top: 0;
@@ -227,9 +205,7 @@ body {
         text-align: center;
     }
 
-    .grid-item:hover .hover-overlay {
-        opacity: 1;
-    }
+
 .top-banner {
   position: fixed;
   top: 0;
@@ -244,42 +220,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveBanner 20s linear infinite; /* Adjust animation duration as needed */
+  animation: moveBanner 30s linear infinite; /* Adjust animation duration as needed */
   animation-delay: 0s; /* Delay the animation for 10 seconds */
 }
-.navbar {
-    position: fixed; /* Position fixed so it stays at the top right */
-    top: 7.5%; /* Align 5% down from the top of the viewport */
-    right: 2.5%; /* Align 2.5% away from the right of the viewport */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 60px;
-    background-color: transparent; /* Background set to transparent */
-    color: #fff;
-    padding: 0 20px;
-    font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-    font-size: 20px; /* Increase font size */
-    font-weight: bold;
-    transform: translateY(0); /* Optional: Ensure no offset from top */
-  }
-
-  /* Style for navbar buttons */
-  .navbar-btn {
-    margin-left: 10px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  /* Style for navbar buttons on hover */
-  .navbar-btn:hover {
-	animation: fadeInvert 0.5s forwards;
-  } 
 @keyframes fadeInvert{
 	0%{
 		background-color: #000;
@@ -323,7 +266,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #fff; /* Set the font color of the placeholder text to white */
   font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
   font-size: 20px; /* Increase font size */
@@ -332,6 +275,14 @@ body {
 .par{
 	color: #909090;
 	margin-bottom: 10px;
+}
+.par1{
+	color: #909090;
+	margin-bottom: 10px;
+	margin-top: -5px;
+}
+h2{
+	margin-bottom: -25px;
 }
 .logo-container {
   display: flex;

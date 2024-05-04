@@ -20,6 +20,8 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveTexta').style.fontSize = '10px'; document.getElementById('responsiveTexta').style.color = '#00008b';
 		document.getElementById('responsiveTextb').style.fontSize = '15px';
 		document.getElementById('responsiveTextc').style.fontSize = '10px';
+		document.getElementById('responsiveTextd').style.fontSize = '15px'; 
+		document.getElementById('responsiveTexte').style.fontSize = '10px'; document.getElementById('responsiveTexte').style.color = '#00008b';
     } else { // Reset styles for larger screens
         document.getElementById('logoWordmark').style.width = '200px';
 		document.getElementById('logoHover').style.width = '200px';
@@ -37,6 +39,8 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveTexta').style.fontSize = '15px'; document.getElementById('responsiveTexta').style.color = '#00008b';
 		document.getElementById('responsiveTextb').style.fontSize = '20px';
 		document.getElementById('responsiveTextc').style.fontSize = '15px';
+		document.getElementById('responsiveTextd').style.fontSize = '20px'; 
+		document.getElementById('responsiveTexte').style.fontSize = '15px'; document.getElementById('responsiveTexte').style.color = '#00008b';
 		
     }
 }

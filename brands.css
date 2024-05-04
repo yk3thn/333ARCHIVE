@@ -163,73 +163,12 @@ body {
             background-position: 0 -100%; /* Adjust vertical offset for scrolling */
         }
     }
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        padding: 20px;
-        animation: fadeIn 0.5s ease 1.5s forwards;
-        opacity: 0;
-        position: absolute;
-        top: 20%; /* 20% from the top */
-        width: 100%;
-        height: 80%; /* 60% height of the viewport */
-        overflow-y: scroll; /* Enable vertical scrolling */
-        box-sizing: border-box; /* Include padding in height calculation */
-		transform: translateX(2.65%);
-    }
+	
 	.content{
 		animation: fadeIn 0.5s ease 1.5s forwards;
         opacity: 0;
         position: absolute;
 	}
-
-    .grid-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px; /* Rounded corners */
-        transition: transform 0.3s ease;
-        width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
-        height: calc(25vw - 10px); /* Adjusted height based on viewport width and grid gap */
-        max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
-        max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
-    }
-
-    .grid-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Fit the entire image within the grid item */
-        display: block;
-    }
-
-    .grid-item:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
-    .hover-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hover-overlay h2 {
-        color: #fff;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .grid-item:hover .hover-overlay {
-        opacity: 1;
-    }
 .top-banner {
   position: fixed;
   top: 0;
@@ -244,38 +183,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveBanner 20s linear infinite; /* Adjust animation duration as needed */
+  animation: moveBanner 30s linear infinite; /* Adjust animation duration as needed */
   animation-delay: 0s; /* Delay the animation for 10 seconds */
 }
-.navbar {
-    position: fixed; /* Position fixed so it stays at the top right */
-    top: 7.5%; /* Align 5% down from the top of the viewport */
-    right: 2.5%; /* Align 2.5% away from the right of the viewport */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 60px;
-    background-color: transparent; /* Background set to transparent */
-    color: #fff;
-    padding: 0 20px;
-    font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-    font-size: 20px; /* Increase font size */
-    font-weight: bold;
-    transform: translateY(0); /* Optional: Ensure no offset from top */
-  }
-
-  /* Style for navbar buttons */
-  .navbar-btn {
-    margin-left: 10px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    cursor: pointer;
-  }
   /* Style for navbar buttons on hover */
   .navbar-btn:hover {
 	animation: fadeInvert 0.5s forwards;
@@ -323,15 +233,24 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 20px;
-  color: #fff; /* Set the font color of the placeholder text to white */
+  margin-bottom: 5px;
+  color: #f00;
   font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
   font-size: 20px; /* Increase font size */
   font-weight: bold;
 }
 .par{
-	color: #909090;
+	color: f00;
 	margin-bottom: 10px;
+}
+.par1{
+	color: f00;
+	margin-bottom: 10px;
+	margin-top: -5px;
+}
+h2{
+	margin-bottom: 500px;
+	color: f00;
 }
 .logo-container {
   display: flex;
@@ -369,9 +288,28 @@ body {
   max-width: 200px;
   transition: opacity 0.3s ease;
 }
-#responsiveText {
-    font-size: 16px; /* Default font size */
+#responsiveText5 {
+    margin-bottom: 5px;
 }
 #responsiveText1 {
-	font-size: 30px; /* Default font size */
+	font-size: 25px; /* Default font size */
 }
+
+.content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .information {
+        text-align: center;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+        margin-top: 10px; /* Adjust as needed */
+    }
+    .grid img {
+        height: 200px; /* Set a fixed height for all images */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
