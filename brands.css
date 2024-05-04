@@ -313,3 +313,14 @@ h2{
         height: 200px; /* Set a fixed height for all images */
         object-fit: cover; /* Maintain aspect ratio */
     }
+.responsive-img {
+        width: 100%;
+        height: auto;
+    }
+@media only screen and (max-width: 768px) {
+            .responsive-img {
+                /* Reduce size by 50% using the transform property */
+                transform: scale(0.5);
+            }
+        }
+		
