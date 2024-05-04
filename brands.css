@@ -320,7 +320,7 @@ h2{
 @media only screen and (max-width: 768px) {
             .responsive-img {
                 /* Reduce size by 50% using the transform property */
-                transform: scale(0.5);
+                transform: scale(0.25);
             }
         }
 		
