@@ -19,9 +19,9 @@ function nextImage() {
   }
   document.getElementById("mainImage").src = images[currentIndex];
 }
-balenciaga_bioleaf_tshirt btn = document.querySelector('.btn');
-    balenciaga_bioleaf_tshirt imageGridOverlay = document.querySelector('.image-grid-overlay');
-    balenciaga_bioleaf_tshirt closeBtn = document.createElement('span');
+const btn = document.querySelector('.btn');
+    const imageGridOverlay = document.querySelector('.image-grid-overlay');
+    const closeBtn = document.createElement('span');
     closeBtn.innerHTML = '&times;';
     closeBtn.className = 'image-grid-close';
     imageGridOverlay.appendChild(closeBtn);
