@@ -115,14 +115,6 @@ h4{
   max-width: 200px;
   transition: opacity 0.3s ease;
 }
-
-.container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
 .leftLogo{
 	width: 5%;
 	top: 27%;
