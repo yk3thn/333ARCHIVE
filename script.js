@@ -17,7 +17,7 @@ function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
-	if (isMobile) { // Adjust styles for smaller screens
+	if (isMobile) {
         document.getElementById('navbtn').style.fontSize = '10px';
 		document.getElementById('navbtn2').style.fontSize = '10px';
 		document.getElementById('LLogo').style.top = '12.5%';
@@ -46,6 +46,24 @@ const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
     }
 }
 
-// Call the function initially and on window resize
 adjustStylesForScreenSize();
 window.addEventListener('resize', adjustStylesForScreenSize);
+
+window.addEventListener("load", () => {
+    const intro = document.getElementById("intro-animation");
+    const siteContent = document.getElementById("site-content");
+    const lastLogo = document.getElementById("RLogo");
+
+   
+    document.querySelectorAll("#LLogo, #MLogo, #RLogo").forEach(el => {
+        el.style.animation = "none";
+        el.offsetHeight;
+        el.style.animation = null;
+    });
+
+
+    lastLogo.addEventListener("animationend", () => {
+        intro.style.display = "none";
+        siteContent.style.display = "block";
+    });
+});

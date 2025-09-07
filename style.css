@@ -123,10 +123,10 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1; /* Place behind other content */
-        background-image: url('assets/background.png'); /* Replace with your image */
+        z-index: -1; 
+        background-image: url('assets/background.png'); 
         background-size: cover;
-        animation: scrollBackground 30s linear infinite; /* Adjust speed as needed */
+        animation: scrollBackground 30s linear infinite; 
     }
 
     @keyframes scrollBackground {
@@ -134,7 +134,7 @@ body{
             background-position: 0 0;
         }
         100% {
-            background-position: 0 -100%; /* Adjust vertical offset for scrolling */
+            background-position: 0 -100%; 
         }
     }
 #searchContainer {
@@ -158,8 +158,8 @@ body{
 }
 #imageGallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(4, 1fr)); /* Adjust minmax value as needed */
-  grid-gap: 10px; /* Adjust the gap between grid items */
+  grid-template-columns: repeat(auto-fill, minmax(4, 1fr)); 
+  grid-gap: 10px; 
 }
 
     .grid-container {
@@ -170,11 +170,11 @@ body{
         animation: fadeIn 0.5s ease 1.5s forwards;
         opacity: 0;
         position: absolute;
-        top: 15%; /* 20% from the top */
+        top: 15%;
         width: 100%;
-        height: 80%; /* 60% height of the viewport */
-        overflow-y: scroll; /* Enable vertical scrolling */
-        box-sizing: border-box; /* Include padding in height calculation */
+        height: 80%;
+        overflow-y: scroll;
+        box-sizing: border-box; 
 		transform: translateX(2.65%);
     }
 	.content{
@@ -186,18 +186,18 @@ body{
     .grid-item {
         position: relative;
         overflow: hidden;
-        border-radius: 10px; /* Rounded corners */
+        border-radius: 10px;
         transition: transform 0.3s ease;
-        width: calc(20vw - 10px); /* Adjusted width to account for grid gap */
-        height: auto; /* Adjusted height based on viewport width and grid gap */
-        max-width: 100%; /* Ensure the grid item doesn't exceed its container width */
-        max-height: 100%; /* Ensure the grid item doesn't exceed its container height */
+        width: calc(20vw - 10px);
+        height: auto; 
+        max-width: 100%;
+        max-height: 100%; 
     }
 
     .grid-item img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Fit the entire image within the grid item */
+        object-fit: cover;
         display: block;
     }
 
@@ -232,38 +232,38 @@ body{
 .top-banner {
   position: fixed;
   top: 0;
-  left: -100%; /* Start off the screen on the left */
+  left: -100%;
   width: 150%;
-  height: 50px; /* Adjust the height of the banner */
+  height: 50px; 
   background-color: invisible; /* Background color of the banner */
-  color: #fff; /* Text color of the banner */
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 15px; /* Increase font size */
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px; 
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveBanner 30s linear infinite; /* Adjust animation duration as needed */
-  animation-delay: 0s; /* Delay the animation for 10 seconds */
+  animation: moveBanner 30s linear infinite; 
+  animation-delay: 0s; 
 }
 .navbar {
-    position: fixed; /* Position fixed so it stays at the top right */
-    top: 7.5%; /* Align 5% down from the top of the viewport */
-    right: 2.5%; /* Align 2.5% away from the right of the viewport */
+    position: fixed; 
+    top: 7.5%; 
+    right: 2.5%; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 60px;
-    background-color: transparent; /* Background set to transparent */
+    background-color: transparent;
     color: #fff;
     padding: 0 20px;
-    font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-    font-size: 25px; /* Increase font size */
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 25px; 
     font-weight: bold;
-    transform: translateY(0); /* Optional: Ensure no offset from top */
+    transform: translateY(0);
   }
 
-  /* Style for navbar buttons */
+
   .navbar-btn {
     margin-left: 10px;
     padding: 8px 12px;
@@ -276,7 +276,7 @@ body{
     cursor: pointer;
   }
 
-  /* Style for navbar buttons on hover */
+
   .navbar-btn:hover {
 	animation: fadeInvert 0.5s forwards;
   } 
@@ -304,10 +304,10 @@ body{
 }
 @keyframes moveBanner {
   0% {
-    transform: translateX(-25%); /* Start from the left */
+    transform: translateX(-25%);
   }
   100% {
-    transform: translateX(200%); /* Move to the right */
+    transform: translateX(200%);
   }
 }
 
@@ -325,12 +325,12 @@ body{
   font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  background-color: #f00; /* Red color */
-  color: #fff; /* White text color */
+  background-color: #f00;
+  color: #fff;
   cursor: pointer;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .smallButton:hover {
-  background-color: #d00; /* Darker red on hover */
+  background-color: #d00;
 }
