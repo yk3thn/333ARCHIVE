@@ -24,6 +24,7 @@ body{
 	animation-fill-mode: forwards;
 	animation-duration: 1.5s;
 	animation-name: slideInLeft;
+	margin-bottom: 75%;
 }
 .largeLogo{
 	width: 10%;
@@ -42,7 +43,7 @@ body{
 	animation-fill-mode: forwards;
 	animation-duration: 1.5s;
 	animation-name: slideInRight;
-	margin-bottom: 75%;
+	margin-bottom: 90%;
 }
 @keyframes slideIn {
     0% {
