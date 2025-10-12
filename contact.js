@@ -1,8 +1,9 @@
 function adjustStylesForScreenSize() {
-    var screenWidth = window.innerWidth;
-const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+    
 
-	if (isMobile) {
+var screenWidth = window.innerWidth;
+
+    if (screenWidth <= 1300){
         document.getElementById('navbtn').style.fontSize = '10px';
 		document.getElementById('navbtn2').style.fontSize = '10px';
 		document.getElementById('LLogo').style.top = '12.5%';
@@ -46,6 +47,7 @@ document.getElementById('logoWordmark').style.width = '125px';
 		document.getElementById('navbtn2').style.padding = '7px 15px';
         document.querySelector('.grid-container').style.marginTop = '50px';
 		document.getElementById('banner').style.fontSize = '15px';
+document.getElementById('logoWordmark').style.width = '200px';
 document.getElementById('logoHover').style.width = '200px';
 		document.getElementById('banner').style.fontSize = '15px';
 		document.getElementById('responsiveText').style.fontSize = 	'40px';

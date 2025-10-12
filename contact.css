@@ -15,7 +15,7 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-//.leftLogo{
+.leftLogo{
 	width: 5%;
 	top: 27%;
 	left: 35%;
@@ -33,7 +33,7 @@ body{
 	animation-duration: 1.75s;
     animation-name: slideIn;
 }
-//.rightLogo{
+.rightLogo{
 	width: 5%;
 	top: 27%;
 	left: 53%;
