@@ -40,7 +40,7 @@ function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
-	if (isMobile) {
+	if (screenWidth <= 1300) {
         document.getElementById('navbtn').style.fontSize = '10px';
 		document.getElementById('navbtn2').style.fontSize = '10px';
 		document.getElementById('LLogo').style.top = '12.5%';
