@@ -69,5 +69,5 @@ document.getElementById('logoHover').style.width = '200px';
 
 
 // Call the function initially and on window resize
-// adjustStylesForScreenSize();
-// window.addEventListener('resize', adjustStylesForScreenSize);
+adjustStylesForScreenSize();
+window.addEventListener('resize', adjustStylesForScreenSize);
