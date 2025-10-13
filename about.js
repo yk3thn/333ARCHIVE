@@ -43,6 +43,10 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveTextb').style.fontSize = '20px';
 		document.getElementById('responsiveTextc').style.fontSize = '15px';
 		
+		document.getElementById('LLogo').style.top = '27%';
+		document.getElementById('RLogo').style.top = '27%';
+		document.getElementById('MLogo').style.top = '1%';
+		
     }
 }
 

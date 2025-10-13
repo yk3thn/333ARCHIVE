@@ -1,4 +1,4 @@
-const images = ["../assets/items/agreatchaos_spellout_tshirt/1.png", "../assets/items/agreatchaos_spellout_tshirt/2.png"];
+const images = ["../assets/items/agreatchaos_spellout_tshirt/1.png", "../assets/items/agreatchaos_spellout_tshirt/2.png", "../assets/items/agreatchaos_spellout_tshirt/3.png", "../assets/items/agreatchaos_spellout_tshirt/4.png", "../assets/items/agreatchaos_spellout_tshirt/5.png"];
 let currentIndex = 0;
 //document.getElementById("mainImage").src = images[currentIndex];
 
@@ -35,3 +35,44 @@ const btn = document.querySelector('.btn');
         imageGridOverlay.classList.remove('active');
         document.body.style.overflow = ''; // Re-enable scrolling
     });
+	
+function adjustStylesForScreenSize() {
+    var screenWidth = window.innerWidth;
+//const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
+	if (screenWidth <= 1300) {
+		document.getElementById('banner').style.fontSize = '10px';
+		
+		document.getElementById('LLogo').style.top = '12.5%';
+		document.getElementById('RLogo').style.top = '12.5%';
+		document.getElementById('MLogo').style.top = '5%';
+    } else {
+		document.getElementById('LLogo').style.top = '27%';
+		document.getElementById('RLogo').style.top = '27%';
+		document.getElementById('MLogo').style.top = '1%';
+
+		document.getElementById('banner').style.fontSize = '15px';
+    }
+}
+
+adjustStylesForScreenSize();
+window.addEventListener('resize', adjustStylesForScreenSize);
+
+window.addEventListener("load", () => {
+    const intro = document.getElementById("intro-animation");
+    const siteContent = document.getElementById("site-content");
+    const lastLogo = document.getElementById("RLogo");
+
+   
+    document.querySelectorAll("#LLogo, #MLogo, #RLogo").forEach(el => {
+        el.style.animation = "none";
+        el.offsetHeight;
+        el.style.animation = null;
+    });
+
+
+    lastLogo.addEventListener("animationend", () => {
+        intro.style.display = "none";
+        siteContent.style.display = "block";
+    });
+});

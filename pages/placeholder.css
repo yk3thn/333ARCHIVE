@@ -115,33 +115,36 @@ h4{
   max-width: 200px;
   transition: opacity 0.3s ease;
 }
+.leftLogo{
+	width: 5%;
+	top: 27%;
+	left: 35%;
+	position: fixed;
+	animation-delay: 0.1s;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInLeft;
+}
 .largeLogo{
 	width: 10%;
 	top: 1%;
 	left: 42%;
 	position: fixed;
+	animation-delay: 0.1s;
 	animation-fill-mode: forwards;
 	animation-duration: 1.75s;
     animation-name: slideIn;
 }
-.leftLogo {
-    width: 5%;
-    top: 25%;
-    left: 35%;
-    position: fixed;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-name: slideInLeft;
-}
-
-.rightLogo {
-    width: 5%;
-    top: 25%;
-    left: 53%;
-    position: fixed;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-name: slideInRight;
+.rightLogo{
+	width: 5%;
+	top: 27%;
+	left: 53%;
+	position: fixed;
+	animation-delay: 0.1s;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInRight;
+	
 }
 @keyframes slideIn {
     0% {
