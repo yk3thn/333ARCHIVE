@@ -42,29 +42,34 @@ function adjustStylesForScreenSize() {
     }
 }
 
-// Run everything when DOM and assets are fully ready
 window.addEventListener("load", function () {
-    // Ensure logos exist before applying any animation resets
     const logos = document.querySelectorAll(".leftLogo, .largeLogo, .rightLogo");
 
-    if (logos.length > 0) {
-        // Give the browser time to render before resetting animations
-        setTimeout(() => {
+    // Run style adjustments first
+    adjustStylesForScreenSize();
+    window.addEventListener('resize', adjustStylesForScreenSize);
+
+    // Detect if animations are frozen (mobile Safari sometimes does this)
+    setTimeout(() => {
+        let anyFrozen = false;
+        logos.forEach(el => {
+            const computed = window.getComputedStyle(el);
+            const matrix = new WebKitCSSMatrix(computed.transform);
+            // If transform is identity and opacity is 1, animation never started
+            if (matrix.m41 === 0 && matrix.m42 === 0) {
+                anyFrozen = true;
+            }
+        });
+
+        if (anyFrozen) {
+            // Only restart if truly frozen
             logos.forEach(logo => {
                 logo.style.animation = "none";
             });
-
-            // Force reflow to restart animations
             void document.body.offsetWidth;
-
-            // Reapply the CSS animations
             logos.forEach(logo => {
                 logo.style.animation = "";
             });
-        }, 250); // Delay a bit more for iOS rendering stability
-    }
-
-    // Now adjust sizes for screen
-    adjustStylesForScreenSize();
-    window.addEventListener('resize', adjustStylesForScreenSize);
+        }
+    }, 400); // Give Safari enough time to try first
 });
