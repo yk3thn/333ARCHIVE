@@ -15,15 +15,21 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-.leftLogo{
-	width: 5%;
-	top: 27%;
-	left: 35%;
-	position: fixed;
-	animation-fill-mode: forwards;
-	animation-duration: 1.5s;
-	animation-name: slideInLeft;
+
+@media (max-width: 768px) {
+    .leftLogo,
+    .rightLogo {
+        top: 12%; /* move both logos closer to the top */
+        width: 8%; /* slightly bigger for small screens (optional) */
+    }
+
+    .largeLogo {
+        top: 2%; /* also slightly closer for balance */
+        width: 15%; /* optional for proportion */
+    }
 }
+
+
 .largeLogo{
 	width: 10%;
 	top: 1%;
@@ -33,16 +39,26 @@ body{
 	animation-duration: 1.75s;
     animation-name: slideIn;
 }
-.rightLogo{
-	width: 5%;
-	top: 27%;
-	left: 53%;
-	position: fixed;
-	animation-fill-mode: forwards;
-	animation-duration: 1.5s;
-	animation-name: slideInRight;
-	
+.leftLogo {
+    width: 5%;
+    top: 25%;
+    left: 35%;
+    position: fixed;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-name: slideInLeft;
 }
+
+.rightLogo {
+    width: 5%;
+    top: 25%;
+    left: 53%;
+    position: fixed;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-name: slideInRight;
+}
+
 @keyframes slideIn {
     0% {
         transform: translateX(30%) scale(0.5);
