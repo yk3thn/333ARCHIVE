@@ -16,18 +16,6 @@ body{
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    .leftLogo,
-    .rightLogo {
-        top: 12%; /* move both logos closer to the top */
-        width: 8%; /* slightly bigger for small screens (optional) */
-    }
-
-    .largeLogo {
-        top: 2%; /* also slightly closer for balance */
-        width: 15%; /* optional for proportion */
-    }
-}
 
 
 .largeLogo{
