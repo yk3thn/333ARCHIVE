@@ -1,4 +1,4 @@
-const images = ["../assets/items/agreatchaos_spellout_tshirt/1.png", "../assets/items/agreatchaos_spellout_tshirt/2.png", "../assets/items/agreatchaos_spellout_tshirt/3.png", "../assets/items/agreatchaos_spellout_tshirt/4.png", "../assets/items/agreatchaos_spellout_tshirt/5.png"];
+const images = ["../assets/items/agreatchaos_spellout_tshirt/1.png", "../assets/items/agreatchaos_spellout_tshirt/2.png"];
 let currentIndex = 0;
 //document.getElementById("mainImage").src = images[currentIndex];
 

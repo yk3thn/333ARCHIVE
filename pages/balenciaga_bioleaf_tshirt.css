@@ -1,0 +1,295 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff; /* Set default font color to white */
+}
+/* Update the placeholder text styles to use Helvetica Bold and make it larger */
+.title-text p {
+  color: #fff; /* Set the font color of the placeholder text to white */
+  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Set font weight to bold */
+}
+
+/* Increase the size of the BUY NOW button and use Helvetica Bold */
+.buy-btn {
+  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Increase padding for larger button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 22px; /* Increase font size */
+}
+
+.buy-btn:hover {
+  background-color: #ba0000;
+}
+h4{
+	color: #bbb;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-gallery {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 5%;
+  max-width: 500px;
+}
+
+.gallery-image {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.title-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.prev-btn {
+
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+}
+.logo-link {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-link:hover #logoImage {
+  opacity: 0;
+}
+
+.logo-link:hover #logoHover {
+  opacity: 1;
+}
+
+.logo {
+  max-width: 200px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-width: 200px;
+  transition: opacity 0.3s ease;
+}
+.leftLogo{
+	width: 5%;
+	top: 27%;
+	left: 35%;
+	position: fixed;
+	
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInLeft;
+}
+.largeLogo{
+	width: 10%;
+	top: 1%;
+	left: 42%;
+	position: fixed;
+	
+	animation-fill-mode: forwards;
+	animation-duration: 1.75s;
+    animation-name: slideIn;
+}
+.rightLogo{
+	width: 5%;
+	top: 27%;
+	left: 53%;
+	position: fixed;
+	
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInRight;
+	
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(30%) scale(0.5);
+    }
+    30% {
+        transform: translateX(20%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(20%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100%) translateY(-200%) scale(0.5);
+    }
+    30% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateX(-1000%);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(30%) translateY(-200%) scale(0.5);
+    }
+    30% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateX(1000%);
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Apply fade-in animation to logo, image, text, and button */
+  .logo,
+  .gallery-image,
+  .placeholder-text,
+  .buy-btn,
+  .prev-btn,
+	.next-btn,
+	.title-text{
+		
+    animation: fadeIn 0.5s ease 1.5s forwards;
+  }
+  .logo,
+.gallery-image,
+.placeholder-text,
+.buy-btn,
+.prev-btn,
+.next-btn,
+.title-text{
+  opacity: 0; /* Start with opacity 0 */
+}
+
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        overflow-x: hidden;
+    }
+
+    .text-section {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #f00;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .image-grid-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 3;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .image-grid-overlay.active {
+        display: block;
+    }
+
+    .image-grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .image-grid-item {
+        position: relative;
+        cursor: pointer;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+    }
+
+    .image-grid-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-grid-item:hover {
+        transform: scale(1.1);
+    }
+
+    .image-grid-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        font-size: 50px;
+        cursor: pointer;
+        z-index: 4;
+    }
