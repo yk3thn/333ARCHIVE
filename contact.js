@@ -1,7 +1,7 @@
 function adjustStylesForScreenSize() {
-    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+    var screenWidth = window.innerWidth;
 
-	if (isMobile)) {
+    if (screenWidth <= 1300) {
         document.getElementById('logoWordmark').style.width = '125px';
         document.getElementById('logoHover').style.width = '125px';
         document.getElementById('banner').style.fontSize = '10px';
