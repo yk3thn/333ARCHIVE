@@ -20,6 +20,11 @@ function adjustStylesForScreenSize() {
 		document.getElementById('responsiveTexta').style.fontSize = '10px'; document.getElementById('responsiveTexta').style.color = '#00008b';
 		document.getElementById('responsiveTextb').style.fontSize = '15px'; document.getElementById('responsiveTextb').style.marginBottom = '-15px';
 		document.getElementById('responsiveTextc').style.fontSize = '10px';
+		
+		document.getElementById('LLogo').style.top = '12.5%';
+		document.getElementById('RLogo').style.top = '12.5%';
+		document.getElementById('MLogo').style.top = '5%';
+		document.getElementById('banner').style.fontSize = '10px';
     } else { // Reset styles for larger screens
         document.getElementById('logoWordmark').style.width = '200px';
 		document.getElementById('logoHover').style.width = '200px';
