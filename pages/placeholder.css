@@ -120,7 +120,7 @@ h4{
 	top: 27%;
 	left: 35%;
 	position: fixed;
-	animation-delay: 0.1s;
+	
 	animation-fill-mode: forwards;
 	animation-duration: 1.5s;
 	animation-name: slideInLeft;
@@ -130,7 +130,7 @@ h4{
 	top: 1%;
 	left: 42%;
 	position: fixed;
-	animation-delay: 0.1s;
+	
 	animation-fill-mode: forwards;
 	animation-duration: 1.75s;
     animation-name: slideIn;
@@ -140,7 +140,7 @@ h4{
 	top: 27%;
 	left: 53%;
 	position: fixed;
-	animation-delay: 0.1s;
+	
 	animation-fill-mode: forwards;
 	animation-duration: 1.5s;
 	animation-name: slideInRight;
