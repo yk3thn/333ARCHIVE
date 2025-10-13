@@ -45,5 +45,10 @@ function adjustStylesForScreenSize() {
 }
 
 // Call the function initially and on window resize
-adjustStylesForScreenSize();
-window.addEventListener('resize', adjustStylesForScreenSize);
+window.addEventListener("load", function () {
+    adjustStylesForScreenSize();
+    window.addEventListener('resize', adjustStylesForScreenSize);
+});
+
+
+// setTimeout(() => { document.querySelectorAll(".leftLogo, .largeLogo, .rightLogo").forEach(el => {        el.style.animation = "none";        el.offsetHeight; // force reflow        el.style.animation = null;    }); }, 100);
