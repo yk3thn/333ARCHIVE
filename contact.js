@@ -51,4 +51,4 @@ window.addEventListener("load", function () {
 });
 
 
-// setTimeout(() => { document.querySelectorAll(".leftLogo, .largeLogo, .rightLogo").forEach(el => {        el.style.animation = "none";        el.offsetHeight; // force reflow        el.style.animation = null;    }); }, 100);
+setTimeout(() => { document.querySelectorAll(".leftLogo, .largeLogo, .rightLogo").forEach(el => {        el.style.animation = "none";        el.offsetHeight; // force reflow        el.style.animation = null;    }); }, 100);
