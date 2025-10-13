@@ -38,14 +38,11 @@ const btn = document.querySelector('.btn');
 	
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
-const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+//const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
 	if (screenWidth <= 1300) {
         document.getElementById('navbtn').style.fontSize = '10px';
 		document.getElementById('navbtn2').style.fontSize = '10px';
-		document.getElementById('LLogo').style.top = '12.5%';
-		document.getElementById('RLogo').style.top = '12.5%';
-		document.getElementById('MLogo').style.top = '5%';
         document.getElementById('searchInput').style.fontSize = '12px';
         document.getElementById('searchInput').style.width = '100px';
         document.getElementById('searchContainer').style.padding = '5px';
@@ -53,6 +50,10 @@ const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches
 		document.getElementById('navbtn2').style.padding = '5px 10px';
         document.querySelector('.grid-container').style.marginTop = '40px';
 		document.getElementById('banner').style.fontSize = '10px';
+		
+		document.getElementById('LLogo').style.top = '12.5%';
+		document.getElementById('RLogo').style.top = '12.5%';
+		document.getElementById('MLogo').style.top = '5%';
     } else {
         document.getElementById('navbtn').style.fontSize = '20px';
 		document.getElementById('navbtn2').style.fontSize = '20px';

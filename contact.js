@@ -24,7 +24,6 @@ function adjustStylesForScreenSize() {
 		document.getElementById('LLogo').style.top = '12.5%';
 		document.getElementById('RLogo').style.top = '12.5%';
 		document.getElementById('MLogo').style.top = '5%';
-		document.getElementById('banner').style.fontSize = '10px';
     } else {
         document.getElementById('logoWordmark').style.width = '200px';
         document.getElementById('logoHover').style.width = '200px';
