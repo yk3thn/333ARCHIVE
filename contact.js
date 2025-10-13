@@ -21,7 +21,7 @@ function adjustStylesForScreenSize() {
         document.getElementById('responsiveTextd').style.fontSize = '20px';
         document.getElementById('responsiveTexte').style.fontSize = '15px';
 
-		document.getElementById('LLogo').style.top = '1%';
+		document.getElementById('LLogo').style.top = '5%';
 		document.getElementById('RLogo').style.top = '12.5%';
 		document.getElementById('MLogo').style.top = '5%';
 		document.getElementById('banner').style.fontSize = '10px';
