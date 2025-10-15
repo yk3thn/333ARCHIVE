@@ -128,7 +128,7 @@ body{
 .next-btn,
 .title-text,
 .logo-hover{
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 0;
 }
 
 body {
@@ -141,10 +141,10 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1; /* Place behind other content */
-        background-image: url('assets/background.png'); /* Replace with your image */
+        z-index: -1;
+        background-image: url('assets/background.png');
         background-size: cover;
-        animation: scrollBackground 30s linear infinite; /* Adjust speed as needed */
+        animation: scrollBackground 30s linear infinite;
     }
 
     @keyframes scrollBackground {
@@ -152,7 +152,7 @@ body {
             background-position: 0 0;
         }
         100% {
-            background-position: 0 -100%; /* Adjust vertical offset for scrolling */
+            background-position: 0 -100%;
         }
     }
     .grid-container {
@@ -163,11 +163,11 @@ body {
         animation: fadeIn 0.5s ease 1.5s forwards;
         opacity: 0;
         position: absolute;
-        top: 20%; /* 20% from the top */
+        top: 20%;
         width: 100%;
-        height: 80%; /* 60% height of the viewport */
-        overflow-y: scroll; /* Enable vertical scrolling */
-        box-sizing: border-box; /* Include padding in height calculation */
+        height: 80%;
+        overflow-y: scroll;
+        box-sizing: border-box; 
 		transform: translateX(2.65%);
     }
 	.content{
@@ -200,19 +200,19 @@ body {
 .top-banner {
   position: fixed;
   top: 0;
-  left: -100%; /* Start off the screen on the left */
+  left: -100%; 
   width: 150%;
-  height: 50px; /* Adjust the height of the banner */
-  background-color: invisible; /* Background color of the banner */
-  color: #fff; /* Text color of the banner */
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 15px; /* Increase font size */
+  height: 50px; 
+  background-color: invisible;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px; 
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveBanner 30s linear infinite; /* Adjust animation duration as needed */
-  animation-delay: 0s; /* Delay the animation for 10 seconds */
+  animation: moveBanner 30s linear infinite; 
+  animation-delay: 0s;
 }
 
 @keyframes fadeInvert{
@@ -239,17 +239,17 @@ body {
 }
 @keyframes moveBanner {
   0% {
-    transform: translateX(-50%); /* Start from the left */
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(200%); /* Move to the right */
+    transform: translateX(200%);
   }
 }
 .information p {
-  color: #fff; /* Set the font color of the placeholder text to white */
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 30px; /* Increase font size */
-  font-weight: bold; /* Set font weight to bold */
+  color: #fff; 
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
 .information {
   position: fixed;
@@ -258,9 +258,9 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   margin-bottom: 20px;
-  color: #fff; /* Set the font color of the placeholder text to white */
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 20px; /* Increase font size */
+  color: #fff; 
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 20px;
   font-weight: bold;
 }
 .a{

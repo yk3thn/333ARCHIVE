@@ -1,7 +1,7 @@
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1300) {
+    if (screenWidth <= 1300) { /* note to self: make sure all elements actually exist */
         document.getElementById('logoWordmark').style.width = '125px';
         document.getElementById('logoHover').style.width = '125px';
         document.getElementById('banner').style.fontSize = '10px';
@@ -49,24 +49,20 @@ function adjustStylesForScreenSize() {
 window.addEventListener("load", function () {
     const logos = document.querySelectorAll(".leftLogo, .largeLogo, .rightLogo");
 
-    // Run style adjustments first
     adjustStylesForScreenSize();
     window.addEventListener('resize', adjustStylesForScreenSize);
 
-    // Detect if animations are frozen (mobile Safari sometimes does this)
     setTimeout(() => {
         let anyFrozen = false;
         logos.forEach(el => {
             const computed = window.getComputedStyle(el);
             const matrix = new WebKitCSSMatrix(computed.transform);
-            // If transform is identity and opacity is 1, animation never started
             if (matrix.m41 === 0 && matrix.m42 === 0) {
                 anyFrozen = true;
             }
         });
 
         if (anyFrozen) {
-            // Only restart if truly frozen
             logos.forEach(logo => {
                 logo.style.animation = "none";
             });
@@ -75,5 +71,5 @@ window.addEventListener("load", function () {
                 logo.style.animation = "";
             });
         }
-    }, 400); // Give Safari enough time to try first
+    }, 400);
 });

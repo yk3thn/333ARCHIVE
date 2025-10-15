@@ -3,7 +3,7 @@
 function adjustStylesForScreenSize() {
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1300) { // Adjust styles for smaller screens
+    if (screenWidth <= 1300) {
         document.getElementById('logoWordmark').style.width = '125px';
 		document.getElementById('logoHover').style.width = '125px';
 		document.getElementById('banner').style.fontSize = '10px';
@@ -25,7 +25,7 @@ function adjustStylesForScreenSize() {
 		document.getElementById('RLogo').style.top = '12.5%';
 		document.getElementById('MLogo').style.top = '5%';
 		document.getElementById('banner').style.fontSize = '10px';
-    } else { // Reset styles for larger screens
+    } else {
         document.getElementById('logoWordmark').style.width = '200px';
 		document.getElementById('logoHover').style.width = '200px';
 		document.getElementById('banner').style.fontSize = '15px';
@@ -50,6 +50,5 @@ function adjustStylesForScreenSize() {
     }
 }
 
-// Call the function initially and on window resize
 adjustStylesForScreenSize();
 window.addEventListener('resize', adjustStylesForScreenSize);
