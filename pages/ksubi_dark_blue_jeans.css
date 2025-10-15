@@ -4,26 +4,26 @@ body {
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff; /* Set default font color to white */
-}
-/* Update the placeholder text styles to use Helvetica Bold and make it larger */
-.title-text p {
-  color: #fff; /* Set the font color of the placeholder text to white */
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
-  font-size: 28px; /* Increase font size */
-  font-weight: bold; /* Set font weight to bold */
+  color: #fff;
 }
 
-/* Increase the size of the BUY NOW button and use Helvetica Bold */
+.title-text p {
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 28px; 
+  font-weight: bold;
+}
+
+
 .buy-btn {
-  font-family: 'Helvetica Neue', sans-serif; /* Use Helvetica Neue font family */
+  font-family: 'Helvetica Neue', sans-serif;
   background-color: #f00;
   color: #fff;
   border: none;
-  padding: 15px 30px; /* Increase padding for larger button */
+  padding: 15px 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 22px; /* Increase font size */
+  font-size: 22px;
 }
 
 .buy-btn:hover {
@@ -199,7 +199,7 @@ h4{
     }
   }
 
-  /* Apply fade-in animation to logo, image, text, and button */
+
   .logo,
   .gallery-image,
   .placeholder-text,
@@ -217,7 +217,7 @@ h4{
 .prev-btn,
 .next-btn,
 .title-text{
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 0;
 }
 
 body {
