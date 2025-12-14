@@ -7,7 +7,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 	overflow-x: hidden;
-	overflow: hidden;
+	overflow: hidden; 
 }
 .container {
     display: flex;
@@ -236,7 +236,7 @@ body{
   left: -100%;
   width: 150%;
   height: 50px; 
-  background-color: invisible; /* Background color of the banner */
+  background-color: invisible;
   color: #fff;
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 15px; 

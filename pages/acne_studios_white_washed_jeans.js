@@ -28,12 +28,12 @@ const btn = document.querySelector('.btn');
 
     btn.addEventListener('click', () => {
         imageGridOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
     });
 
     closeBtn.addEventListener('click', () => {
         imageGridOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Re-enable scrolling
+        document.body.style.overflow = '';
     });
 	
 function adjustStylesForScreenSize() {
