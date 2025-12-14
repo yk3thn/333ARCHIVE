@@ -39,42 +39,25 @@ adjustStylesForScreenSize();
 window.addEventListener('resize', adjustStylesForScreenSize);
 
 window.addEventListener("load", () => {
-    /* ===============================
-       ✅ HOMEPAGE LQ → HQ IMAGE SWAP
-       =============================== */
     const heroImage = document.getElementById("heroImage");
+    if (!heroImage || !heroImage.dataset.hq) return;
+
     const HQ_KEY = "homepageHQLoaded";
+    const hqSrc = heroImage.dataset.hq;
 
-    if (heroImage && heroImage.dataset.hq) {
-        if (localStorage.getItem(HQ_KEY)) {
-            // HQ already cached → use immediately
-            heroImage.src = heroImage.dataset.hq;
-        } else {
-            // Load HQ AFTER animation
-            setTimeout(() => {
-                const hqImg = new Image();
-                hqImg.src = heroImage.dataset.hq;
-
-                hqImg.onload = () => {
-                    heroImage.src = heroImage.dataset.hq;
-                    localStorage.setItem(HQ_KEY, "true");
-                };
-            }, 1500); // matches animation duration
-        }
+    // If HQ already cached before, use it immediately
+    if (localStorage.getItem(HQ_KEY)) {
+        heroImage.src = hqSrc;
+        return;
     }
 
-    /* ===============================
-       Existing animation reset logic
-       =============================== */
-    const intro = document.getElementById("intro-animation");
-    const siteContent = document.getElementById("site-content");
-    const lastLogo = document.getElementById("RLogo");
+    // Quietly preload HQ in the background
+    const hqImg = new Image();
+    hqImg.src = hqSrc;
 
-
-    if (lastLogo && intro && siteContent) {
-        lastLogo.addEventListener("animationend", () => {
-            intro.style.display = "none";
-            siteContent.style.display = "block";
-        });
-    }
+    hqImg.onload = () => {
+        heroImage.src = hqSrc;
+        localStorage.setItem(HQ_KEY, "true");
+    };
 });
+
