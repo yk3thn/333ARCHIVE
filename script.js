@@ -70,11 +70,6 @@ window.addEventListener("load", () => {
     const siteContent = document.getElementById("site-content");
     const lastLogo = document.getElementById("RLogo");
 
-    document.querySelectorAll("#LLogo, #MLogo, #RLogo").forEach(el => {
-        el.style.animation = "none";
-        el.offsetHeight;
-        el.style.animation = null;
-    });
 
     if (lastLogo && intro && siteContent) {
         lastLogo.addEventListener("animationend", () => {
