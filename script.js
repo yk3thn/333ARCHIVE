@@ -38,26 +38,29 @@ function adjustStylesForScreenSize() {
 adjustStylesForScreenSize();
 window.addEventListener('resize', adjustStylesForScreenSize);
 
+
 window.addEventListener("load", () => {
-    const heroImage = document.getElementById("heroImage");
-    if (!heroImage || !heroImage.dataset.hq) return;
+    const images = document.querySelectorAll(".grid-item");
+    if (!images.length) return;
 
-    const HQ_KEY = "homepageHQLoaded";
-    const hqSrc = heroImage.dataset.hq;
+    images.forEach(img => {
+        const lqSrc = img.getAttribute("src");
+        if (!lqSrc || !lqSrc.includes("-lq")) return;
 
-    // If HQ already cached before, use it immediately
-    if (localStorage.getItem(HQ_KEY)) {
-        heroImage.src = hqSrc;
-        return;
-    }
+        const hqSrc = lqSrc.replace("-lq", "");
+        const cacheKey = "hqLoaded:" + hqSrc;
 
-    // Quietly preload HQ in the background
-    const hqImg = new Image();
-    hqImg.src = hqSrc;
+        if (localStorage.getItem(cacheKey)) {
+            img.src = hqSrc;
+            return;
+        }
 
-    hqImg.onload = () => {
-        heroImage.src = hqSrc;
-        localStorage.setItem(HQ_KEY, "true");
-    };
+        const hqImg = new Image();
+        hqImg.src = hqSrc;
+
+        hqImg.onload = () => {
+            img.src = hqSrc;
+            localStorage.setItem(cacheKey, "true");
+        };
+    });
 });
-
