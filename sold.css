@@ -1,0 +1,352 @@
+body{
+	margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.leftLogo{
+	width: 5%;
+	top: 27%;
+	left: 35%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInLeft;
+}
+.largeLogo{
+	width: 10%;
+	top: 1%;
+	left: 42%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.75s;
+    animation-name: slideIn;
+}
+.rightLogo{
+	width: 5%;
+	top: 27%;
+	left: 53%;
+	position: fixed;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-name: slideInRight;
+	
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(30%) scale(0.5);
+    }
+    30% {
+        transform: translateX(20%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(20%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100%) translateY(-200%) scale(0.5);
+    }
+    30% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(40%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateX(-1000%);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(30%) translateY(-200%) scale(0.5);
+    }
+    30% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+    70% {
+        transform: translateX(50%) translateY(200%) scale(1);
+    }
+    100% {
+        transform: translateX(1000%);
+    }
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+.logo,
+.gallery-image,
+.placeholder-text,
+.buy-btn,
+.prev-btn,
+.next-btn,
+.title-text{
+		
+    animation: fadeIn 0.5s ease 1.5s forwards;
+}
+
+.logo,
+.gallery-image,
+.placeholder-text,
+.buy-btn,
+.prev-btn,
+.next-btn,
+.title-text,
+.logo-hover{
+  opacity: 0;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+    }
+.background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('assets/background.png');
+        background-size: cover;
+        animation: scrollBackground 30s linear infinite;
+    }
+
+    @keyframes scrollBackground {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 -100%;
+        }
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        animation: fadeIn 0.5s ease 1.5s forwards;
+        opacity: 0;
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        height: 80%;
+        overflow-y: scroll;
+        box-sizing: border-box;
+		transform: translateX(2.65%);
+    }
+	.content{
+		animation: fadeIn 0.5s ease 1.5s forwards;
+        opacity: 0;
+        position: absolute;
+	}
+
+    
+    .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hover-overlay h2 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 50px;
+  background-color: invisible;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moveBanner 30s linear infinite;
+  animation-delay: 0s;
+}
+@keyframes fadeInvert{
+	0%{
+		background-color: #000;
+		color: #fff;
+	}
+	100%{
+		background-color: #fff;
+		color: #000;
+	}
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+@keyframes moveBanner {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+.information p {
+  color: #fff; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.information {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 5px;
+  color: #fff; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 20px; 
+  font-weight: bold;
+}
+.par{
+	color: #909090;
+	margin-bottom: 10px;
+}
+.par1{
+	color: #909090;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+h2{
+	margin-bottom: -25px;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+}
+.logo-link {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-link:hover #logoImage {
+  opacity: 0;
+}
+
+.logo-link:hover #logoHover {
+  opacity: 1;
+}
+
+.logo {
+  width: 200px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-width: 200px;
+  transition: opacity 0.3s ease;
+}
+#responsiveText5 {
+    margin-bottom: 5px;
+}
+#responsiveText1 {
+	font-size: 25px; 
+}
+
+.carousel {
+  width: 80vw;
+  max-width: 1000px;
+  overflow: hidden;
+  position: relative;
+  margin: 40px auto 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollCarousel 25s linear infinite;
+}
+
+.carousel-image {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeIn 0.5s ease 1.5s forwards;
+}
+
+/* Auto-scrolling animation */
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
